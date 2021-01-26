@@ -10,7 +10,7 @@ namespace ApiRestImportador.Domain.Validacoes.Importacao
         {
             RuleFor(p => p.DataEntrega)
                 .NotEmpty()
-                .WithMessage("O campo Data entrega é requerida.")
+                .WithMessage(x => $"Linha:{x.Linha} O campo Data entrega é requerida.")
                 .Must(DataEntragaValidacao)
                 .WithMessage(x => $"Linha:{x.Linha} Data de entrega não pode ser menor ou igual a hoje.");
 

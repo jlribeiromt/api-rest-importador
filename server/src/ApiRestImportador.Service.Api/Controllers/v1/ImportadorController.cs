@@ -42,7 +42,7 @@ namespace ApiRestImportador.Service.Api.Controllers.v1
         [HttpGet]
         [Produces("application/json")]
         [Consumes("application/json")]
-        public async Task<ActionResult> Get()
+        public async Task<IActionResult> Get()
         {
             var listaImportacao = await _repository.GetAllAsync(c => new ImportacaoDTO
             {
@@ -52,17 +52,13 @@ namespace ApiRestImportador.Service.Api.Controllers.v1
                 DataImportacao = c.DataImportacao
             });
 
-            return Ok(new
-            {
-                Success = true,
-                Data = listaImportacao
-            });
+            return Response(listaImportacao);
         }
 
         [HttpGet("{id}")]
         [Produces("application/json")]
         [Consumes("application/json")]
-        public async Task<ActionResult> Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
             var listaItemImportacao = await _selectSearchItemImportacaoRepository
                 .GetAll(c => new
@@ -76,11 +72,7 @@ namespace ApiRestImportador.Service.Api.Controllers.v1
                 }, p => p.ImportacaoId == id);
 
 
-            return Ok(new
-            {
-                Success = true,
-                Data = listaItemImportacao
-            });
+            return Response(listaItemImportacao);
         }
 
         [HttpPost]

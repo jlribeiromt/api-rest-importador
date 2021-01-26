@@ -18,7 +18,7 @@ namespace ApiRestImportador.Domain.Commands.Importacao
             ItemImportacaos.AddRange(itensImportacao);
 
             DataImportacao = DateTime.Now;
-            TotalItens = ItemImportacaos?.Count ?? 0;
+            TotalItens = ItemImportacaos?.Sum(x => x.Quantidade) ?? 0;
             ValorTotal = ItemImportacaos?.Sum(x => x.ValorTotal) ?? 0;
         }
 
