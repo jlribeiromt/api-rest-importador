@@ -37,5 +37,8 @@
  
 **Após a finalização do build, o link para acesso do swagger  da [APIRestImportador](https://localhost:44369/swagger/index.html).**
 
+## Realizando envio de arquivo .xlsx via postman
+* Para o envio do arquivo, na seção do Headers, inclui a instrução: "key" utilize "Content-Type" e no "value" "multipart/form-data", na seção Body, inclua "key" utilize "file" e no "value" selecione o tipo File e escolha o arquivo.
+
 
 
