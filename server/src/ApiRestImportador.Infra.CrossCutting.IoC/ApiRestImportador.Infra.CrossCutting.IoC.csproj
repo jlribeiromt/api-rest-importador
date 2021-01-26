@@ -4,4 +4,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ApiRestImportador.Domain.Core\ApiRestImportador.Domain.Core.csproj" />
+    <ProjectReference Include="..\ApiRestImportador.Domain\ApiRestImportador.Domain.csproj" />
+    <ProjectReference Include="..\ApiRestImportador.Infra.CrossCutting.Bus\ApiRestImportador.Infra.CrossCutting.Bus.csproj" />
+    <ProjectReference Include="..\ApiRestImportador.Infra.Data\ApiRestImportador.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>
