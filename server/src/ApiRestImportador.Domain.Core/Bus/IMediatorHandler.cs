@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ApiRestImportador.Domain.Core.Commands;
+using ApiRestImportador.Domain.Core.Events;
 using System.Threading.Tasks;
 
 namespace ApiRestImportador.Domain.Core.Bus
